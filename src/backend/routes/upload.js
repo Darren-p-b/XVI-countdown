@@ -44,5 +44,3 @@ router.post("/", upload.single("file"), (req, res) => {
     }
   }
 });
-
-// I was right :)
