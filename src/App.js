@@ -1,30 +1,32 @@
 import React from 'react';
 import './App.css';
 import CountdownClock from './components/countdown';
+import background from './ffxvi-background.jpg';
+import "./fonts/OPTIEngeEtienne.ttf"
+import audioFile from "./XVI Background.mp3"
 import FileUpload from './components/upload';
 
-// const express = require("express");
-// const app = express();
-// const uploadRouter = require("./backend/routes/upload");
-
-// // Other configurations and middleware
-
-// app.use("/upload", uploadRouter);
-// app.use("/uploads", express.static("uploads"));
-
-// // Start the server
-// app.listen(8080, () => {
-//   console.log("Server is running on port 8080");
-// });
-
+// add a audio file to play in the background
+// set audio to 50% volume
 
 function App() {
   return (
-    <div>
-      <h1 className='countdown-header'>Final Fantasy XVI Countdown</h1>
+    <>
+     <div style={{ 
+      backgroundImage: `url(${background})`, 
+      position: 'absolute', 
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      width: '100vw',
+      height: '100vh' }}>
+      <h1 className='countdown-header'>The triumph over crystals begins...</h1>
+      <audio controls id="player">
+        <source src={audioFile} type="audio/mp3" />
+      </audio>
       <CountdownClock />
-      {/* <FileUpload /> */}
-    </div>
+      <FileUpload />
+      </div>
+    </>
   );
 }
 

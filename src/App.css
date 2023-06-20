@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "OPTIEngeEtienne";
+  src: local("OPTIEngeEtienne"),
+   url("./fonts/OPTIEngeEtienne.ttf") format("truetype");
+ }
+
+.countdown-header {
+  font-family: 'OPTIEngeEtienne';
+  letter-spacing: 0.2em;
+  position: 'absolute';
+  left: "1000px";
+  bottom: "1000px";
+}
